@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Khurakh</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Cropper -->
+    <link href="https://unpkg.com/cropperjs/dist/cropper.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/cropperjs/dist/cropper.min.js"></script>
+    <style>
+    .user-message, .bot-message {
+        display: block !important;
+        white-space: pre-wrap !important;
+        line-height: 1.8 !important;
+        word-break: break-word !important;
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔵 NAVBAR -->
+<div class="navbar">
+    <div class="logo">💊 Khurakh</div>
+
+    <div class="nav-links">
+        <a href="javascript:void(0)" onclick="showHome()">Search</a>
+        <a href="javascript:void(0)" onclick="goToCompare()">Compare</a>
+        <a href="javascript:void(0)" onclick="showChat()">Chat</a>
+        <a href="javascript:void(0)" onclick="showUpload()">Upload</a>
+    </div>
+
+    <div class="profile" onclick="showProfile()" style="cursor:pointer;">
+        👤 Profile
+    </div>
+</div>
+
+<!-- 🔄 LOADER -->
+<div id="loader" class="loader" style="display: none;"></div>
+
+<!-- 🟢 HERO -->
+<div id="hero-section" class="hero">
+    <h1>Your Smart Medicine Assistant</h1>
+    <p>Search medicines, check uses, and find safer alternatives</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search medicine...">
+        <button type="button" onclick="searchMedicine()">Search</button>
+    </div>
+</div>
+
+<!-- 📤 UPLOAD SECTION -->
+<div id="upload-section" class="upload-box" style="display:none;">
+
+    <button type="button" onclick="showHome()" class="back-btn">← Back</button>
+
+    <h2>Scan Medicine</h2>
+
+    <input type="file" id="imageInput" hidden>
+
+    <!-- Upload -->
+    <div class="upload-area" onclick="document.getElementById('imageInput').click()">
+        <p>📤 Click to Upload Image</p>
+    </div>
+
+    <!-- Camera -->
+    <button type="button" onclick="openCamera()" class="upload-btn">📸 Use Camera</button>
+
+    <!-- Camera Preview -->
+    <div id="camera-box" style="display:none; margin-top:10px;">
+        <video id="camera" width="300" autoplay style="border-radius:10px;"></video>
+        <br>
+        <button type="button" onclick="captureImage()" class="upload-btn">📸 Capture</button>
+    </div>
+
+    <!-- Hidden Canvas (REQUIRED) -->
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <!-- Preview -->
+    <img id="preview" style="max-width:300px; display:none; margin-top:10px; border-radius:10px;" />
+
+    <!-- Crop -->
+    <button type="button" id="crop-btn" onclick="cropImage()" style="display:none;" class="upload-btn">
+        ✂️ Crop Image
+    </button>
+
+    <!-- Scan -->
+    <button type="button" onclick="uploadImage()" class="upload-btn">
+        🔍 Scan Medicine
+    </button>
+
+</div>
+<!-- ⚖️ COMPARE SECTION -->
+<div id="compare-section" style="display:none; padding:40px; text-align:center;">
+
+    <button type="button" onclick="showHome()" class="back-btn">← Back</button>
+
+    <h2>Compare Medicines</h2>
+    <p>Select medicines to compare their details</p>
+
+    <div id="compare-grid" style="
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    "></div>
+
+    <button type="button" onclick="showComparison()" class="upload-btn" style="margin-top:20px;">
+        Compare Now
+    </button>
+
+</div>
+
+<!-- 🤖 CHAT SECTION -->
+<div id="chat-section" style="display:none; padding:40px;">
+
+    <button type="button" onclick="showHome()" class="back-btn">← Back</button>
+
+    <h2>AI Medicine Assistant</h2>
+
+    <div id="chat-box" style="
+        max-width:600px;
+        margin:auto;
+        background:white;
+        padding:15px;
+        border-radius:10px;
+        height:300px;
+        overflow-y:auto;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    "></div>
+
+    <div style="margin-top:10px; text-align:center;">
+        <input id="chat-input" placeholder="Ask about medicine..."
+            style="width:70%; padding:10px; border-radius:8px; border:1px solid #ccc;">
+        
+        <button type="button" onclick="sendMessage()" class="upload-btn">
+            Send
+        </button>
+    </div>
+
+</div>
+
+<!-- 👤 PROFILE SECTION -->
+<div id="profile-section" style="display:none; padding:40px; text-align:center;">
+
+    <h2>User Profile</h2>
+    <p><b>Name:</b> Akshit</p>
+    <p><b>Email:</b> user@email.com</p>
+
+    <button type="button" onclick="showHome()" class="back-btn">← Back</button>
+
+</div>
+
+<!-- 🟢 RESULTS -->
+<div id="results"></div>
+
+<!-- 🔥 FLOATING BAR -->
+<div id="floating-bar" class="floating-bar" style="display:none;"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

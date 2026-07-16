@@ -1,0 +1,6 @@
+backend/venv/
+__pycache__/
+api key
+ambitionbox_companies.csv
+next_data_dump.json
+notes
