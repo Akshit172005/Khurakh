@@ -19,6 +19,4 @@ If a medicine is not found in the local database, Khurakh utilizes a generative 
 ## 💻 How to Run Locally
 
 ### 1. Clone the Repository
-```bash
-git clone [https://github.com/Akshit172005/Khurakh.git](https://github.com/Akshit172005/Khurakh.git)
-cd Khurakh
+git clone https://github.com/Akshit172005/Khurakh.git
