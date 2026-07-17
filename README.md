@@ -1,14 +1,5 @@
 # 💊 Khurakh – AI-Powered Medicine Scanner & Medical Assistant
 
-<img width="1918" height="931" alt="image" src="https://github.com/user-attachments/assets/996e1585-80f7-4f3f-8cea-39f1c3899901" />
-<img width="1918" height="932" alt="image" src="https://github.com/user-attachments/assets/468fbd9b-7f62-4ba8-a6e0-1767830d8d97" />
-<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/ca779ba3-405b-4d6f-8cac-251ae30f0ca2" />
-<img width="1912" height="693" alt="image" src="https://github.com/user-attachments/assets/cff6e93d-b038-4859-b301-ab04392f8450" />
-<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/88a4b918-ccaf-449a-ac38-b8637f8b3112" />
-
-
-
-
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
@@ -185,33 +176,28 @@ Khurakh
 
 ## 🏠 Home Page
 
-_Add Screenshot Here_
+<img width="1918" height="931" alt="image" src="https://github.com/user-attachments/assets/996e1585-80f7-4f3f-8cea-39f1c3899901" />
 
 ---
 
 ## 🔍 Medicine Search
 
-_Add Screenshot Here_
+<img width="1918" height="932" alt="image" src="https://github.com/user-attachments/assets/468fbd9b-7f62-4ba8-a6e0-1767830d8d97" />
 
 ---
 
 ## 📸 OCR Scanner
 
-_Add Screenshot Here_
+<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/88a4b918-ccaf-449a-ac38-b8637f8b3112" />
 
 ---
 
 ## 💬 AI Chatbot
 
-_Add Screenshot Here_
 
----
+<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/ca779ba3-405b-4d6f-8cac-251ae30f0ca2" />
+<img width="1912" height="693" alt="image" src="https://github.com/user-attachments/assets/cff6e93d-b038-4859-b301-ab04392f8450" />
 
-## 📊 Search Result
-
-_Add Screenshot Here_
-
----
 
 # ⚙️ Installation
 
